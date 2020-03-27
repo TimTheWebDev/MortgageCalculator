@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mortgage Metrics and Amortization Schedule Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src = "js/Validators.js"></script>
+</head>
+
+<body>
+    <h1>Mortgage Metrics and Amortization Schedule Calculator</h1>
+    <form>
+        <label for="homeCost">Home Cost $</label>
+        <input type="text" id="homeCost" name="homeCost">
+        <span id = 'homeCostValid'></span><br><br>
+        <script>
+            document.getElementById("homeCost").addEventListener("input", function () {
+                var x, text;
+                x = document.getElementById("homeCost").value;
+                if (!myHomeCostValidationFunction()) {
+                    text = "Input not valid";
+                } else {
+                    text = "Input OK";
+                }
+                document.getElementById("homeCostValid").innerHTML = text;})
+        </script>
+
+
+        <label for="downPayment">Down Payment $</label>
+        <input type="text" id="downPayment" name="downPayment">
+        <span id = 'downPaymentValid'></span><br><br>
+        <script>
+            document.getElementById("downPayment").addEventListener("input", function () {
+                var x, text;
+                if (!myDownPaymentValidationFunction()) {
+                    text = "Input not valid";
+                } else {
+                    text = "Input OK";
+                }
+                document.getElementById("downPaymentValid").innerHTML = text;})
+            
+        </script>
+
+
+        <label for="apr">Apr %</label>
+        <input type="text" id="apr" name="apr">
+        <span id = 'aprValid'></span><br><br>
+        <script>
+            document.getElementById("apr").addEventListener("input", function () {
+                if (!myAprValidationFunction()) {
+                    text = "Input not valid";
+                } else {
+                    text = "Input OK";
+                }
+                document.getElementById("aprValid").innerHTML = text;
+
+        
+    })
+        </script>
+
+
+        <label for="years">Loan Duration in Years</label>
+        <select id="years" name="years">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+        </select>
+        <br>
+        <br>
+
+
+        <input type="checkbox" id="amortSched" name="amortSched" value="amortSched">
+        <label for="amortSched">Calculate with Amortization Schedule? </label><br>
+        <script>
+            function check() {
+                document.getElementById("amortSched").checked = true;
+            }
+        </script>
+        <script>
+            function uncheck() {
+                document.getElementById("amortSched").checked = false;
+            }
+        </script>
+        <br>
+
+        
+        <input type="submit" value="Submit">
+    </form>
+<br>
+<br>
+
+<table>
+    <tr ><td>Mortgage Payment</td><td id = "mortgagePayment"></td></tr>
+    <tr ><td>Total Payments</td><td id = "totalPayments"></td></tr>
+    <tr ><td>Total Interest</td><td id = "totalInterest"></td></tr>
+</table>
+    
+    <table id = "output">
+      
+
+    </table>
+    <script src = "\js\Calculator.js">
+
+    </script>
+</body>
+
+</html>
