@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Mortgage Metrics and Amortization Schedule Calculator</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src = "js/Validators.js"></script>
+    <script src="js/Validators.js"></script>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     <form>
         <label for="homeCost">Home Cost $</label>
         <input type="text" id="homeCost" name="homeCost">
-        <span id = 'homeCostValid'></span><br><br>
+        <span id='homeCostValid'></span><br><br>
         <script>
             document.getElementById("homeCost").addEventListener("input", function () {
                 var x, text;
@@ -23,13 +23,14 @@
                 } else {
                     text = "Input OK";
                 }
-                document.getElementById("homeCostValid").innerHTML = text;})
+                document.getElementById("homeCostValid").innerHTML = text;
+            })
         </script>
 
 
         <label for="downPayment">Down Payment $</label>
         <input type="text" id="downPayment" name="downPayment">
-        <span id = 'downPaymentValid'></span><br><br>
+        <span id='downPaymentValid'></span><br><br>
         <script>
             document.getElementById("downPayment").addEventListener("input", function () {
                 var x, text;
@@ -38,14 +39,15 @@
                 } else {
                     text = "Input OK";
                 }
-                document.getElementById("downPaymentValid").innerHTML = text;})
-            
+                document.getElementById("downPaymentValid").innerHTML = text;
+            })
+
         </script>
 
 
         <label for="apr">Apr %</label>
         <input type="text" id="apr" name="apr">
-        <span id = 'aprValid'></span><br><br>
+        <span id='aprValid'></span><br><br>
         <script>
             document.getElementById("apr").addEventListener("input", function () {
                 if (!myAprValidationFunction()) {
@@ -55,8 +57,8 @@
                 }
                 document.getElementById("aprValid").innerHTML = text;
 
-        
-    })
+
+            })
         </script>
 
 
@@ -64,33 +66,11 @@
         <select id="years" name="years">
             <option value="1">1</option>
             <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
             <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            <option value="5">7</option>
             <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
             <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
             <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
             <option value="30">30</option>
         </select>
         <br>
@@ -111,23 +91,36 @@
         </script>
         <br>
 
-        
+
         <input type="submit" value="Submit">
     </form>
-<br>
-<br>
+    <br>
+    <br>
 
-<table>
-    <tr ><td>Mortgage Payment</td><td id = "mortgagePayment"></td></tr>
-    <tr ><td>Total Payments</td><td id = "totalPayments"></td></tr>
-    <tr ><td>Total Interest</td><td id = "totalInterest"></td></tr>
-</table>
-    
-    <table id = "output">
-      
+    <table>
+        <tr>
+            <td>Mortgage Payment</td>
+            <td id="mortgagePayment"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Total Payments</td>
+            <td id="totalPayments"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Total Interest</td>
+            <td id="totalInterest"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <table id="output">
+
 
     </table>
-    <script src = "\js\Calculator.js">
+    <script src="\js\Calculator.js">
 
     </script>
 </body>
