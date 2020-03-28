@@ -57,7 +57,15 @@ function calculate(e) {
     // Instantiates the output object outside the loop
     document.getElementById("output").innerHTML = "";
 
-
+    // The best work around I could find to get both the data validation and the output
+    // number formatting to work was to print out to the HTML from the JS file.  As a 
+    // result I needed to insert the header here as well, just above the loop.
+    document.getElementById("output").innerHTML += `<tr>
+    <td>Payment</td>
+    <td>Remaining Principal</td>
+    <td>Monthly Interest</td>
+    <td>Monthly Principal</td>
+    </tr>`
 
 
 // ***** LOOP *****
@@ -85,14 +93,15 @@ function calculate(e) {
             // Prints month, principal remaining, monthly interest and monthly principal
             // on one line as my output object
             document.getElementById("output").innerHTML += `<tr>
-            <td>Payment  ${i}    </td>
-            <td>Remaining Principal  ${currencyFormat(remainingPrincipal)}</td>
-            <td>Monthly Interest  ${currencyFormat(monthlyAmortInt)}</td>
-            <td>Monthly Principal  ${currencyFormat(monthlyPrincipal)}</td>
+            <td>${i}</td>
+            <td>${currencyFormat(remainingPrincipal)}</td>
+            <td>${currencyFormat(monthlyAmortInt)}</td>
+            <td>${currencyFormat(monthlyPrincipal)}</td>
           </tr>`
         }
     }
 }
 
 
+// This is the listener for the submit button that runs the calculate function
 document.querySelector("form").addEventListener("submit", calculate);

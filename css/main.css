@@ -1,9 +1,8 @@
 body {
-
-}
-
-
-h1 {
+    background: #f2f2f2;
+    }
+    
+    h1 {
     background:#f2f2f2;
     color:#5c8578;
     padding:10px;
@@ -11,5 +10,22 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 0px;
-
-}
+    
+    }
+    
+    form {
+    margin: 25px 0 0 10px;
+    }
+    
+    table {
+    margin: 40px 0 0 10px;
+    }
+    
+    #output {
+    text-align: center;
+    }
+    
+    #output>tbody>tr>td {
+    padding: 10px;
+    }
+    
