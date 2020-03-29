@@ -6,7 +6,7 @@ body {
     h1 {
       background:#f2f2f2;
       color:#5c8578;
-      padding:10px;
+      padding-top:10px;
       font-size:30px;
       text-align: center;
       margin-bottom: 0px;
@@ -14,16 +14,15 @@ body {
     
     h2 {
       color: #24039c;
-      padding-top: 15px;
-      padding-bottom: 25px;
-      text-decoration: underline;;
+      margin: 15px 0px 20px 45px;
+      text-decoration: underline;
     }
 
     h3 {
       color: #427bf5;
-      padding-left: 20px;
+      padding-left: 65px;
       padding-bottom: 15px;
-
+      padding-top: 25px;
     }
 
     form {
@@ -31,10 +30,11 @@ body {
     }
     
     #par {
-      margin: 20px 65px 50px 65px;
+      margin: 20px 65px 10px 65px;
     }
     footer {
         padding-top: 100px;
+        padding-left: 65px;
     }
 
 
@@ -50,7 +50,43 @@ body {
       }
 
 
+      #metrics {
+        font-weight: bold;
+      }
+      
+
+
       th, td {
         padding: 15px;
         text-align: left;
+      }
+
+      #output tr th {
+        background-color: rgb(49, 51, 49);
+        font-weight: bold;
+        color: white
+      }
+
+      #output td:nth-child(even) {
+        background-color: #eee;
+      }
+
+      #output td:nth-child(odd) {
+       background-color: #fff;
+      }
+
+      #links{
+        padding-top: 10px;
+        padding-left: 65px;
+
+      }
+    
+      #aboutmelink {
+        text-align: center;
+      }
+
+      footer, #disclaimer {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
       }

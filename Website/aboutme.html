@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <p><a href="https://www.amortizationschedule.info/">Home</a></p>
-    <p><a href="www.linkedin.com/in/timothy-sutzer">LinkedIn</a></p>
-    <p><a href="https://www.w3schools.com/html/">GitHub</a></p>
-    <p><a href="https://www.w3schools.com/html/">Resume</a></p>
+    <p><a id="links" href="https://www.amortizationschedule.info/">Home</a></p>
+    <p><a id="links"  href="www.linkedin.com/in/timothy-sutzer">LinkedIn</a></p>
+    <p><a id="links"  href="https://www.w3schools.com/html/">GitHub</a></p>
+    <p><a id="links"  href="https://www.w3schools.com/html/">Resume</a></p>
 
     <h2>About Me</h2>
     <p id="par">My name is Timothy Sutzer. I am currently enrolled at Tech Elevator,
@@ -23,7 +23,7 @@
         change careers, I jumped at the chance to learn to program. The
         biggest lesson I have taken from bootcamp is learning to educate
         myself in this discipline. My personal areas of interest are financial
-        technology, digital security, Node.js, Java and continued learning
+        technology, digital security, Vue.js, Java and continued learning
         through paired programming. </p>
 
 
@@ -47,14 +47,13 @@
     <h3>Structure</h3>
     <p id="par">For simplicity’s sake, I broke out the event listeners for the validation
         functions and the validation functions into their own JS files. The
-        code could have been tighter had I not, but for the purposes of someone
-        looking at my work it appears cleaner. All the code is commented and
-        gives some insight into the smaller decisions line by line.
+        code could have been tighter but I opted for readability. All the code is commented to
+        give insight into the smaller decisions.
         Calculate.js does the heavy lifting. It takes in the validated form
         data, instantiates the other variables, does the math and the optional
-        for loop generates the amortization schedule. I use a JS script to
+        for-loop generates the amortization schedule. I use a JS script to
         inject the schedule table header inside the if statement, before the
-        for loop and then the corresponding data. Some simple CSS formats the
+        for-loop and then the corresponding data. Some simple CSS formats the
         HTML pages. </p>
 
     <h3>Analysis</h3>
@@ -83,7 +82,7 @@
         in the input. The field is taken in as text in the HTML or I could
         limit it there using min, max and step in the input. The purpose of
         this exercise is to demonstrate a working knowledge of JS so changing
-        it defeats the purpose. Extra decimal places don’t blow up the code
+        the HTML defeats the purpose. Extra decimal places don’t blow up the code
         or have a tangible outcome numerically so I am content to leave it
         alone. </p>
 
@@ -91,8 +90,7 @@
     <p id="par">Because there is no back end and I have strictly limited the input,
         attacking the site would be difficult. The course devotes very
         little discussion to security and the discussions we have had revolve
-        around poor database design. This isn’t a dare, if you look up and
-        see a black hat, please don’t blow me up because you can.</p>
+        around poor database design.</p>
 
     <footer>
         <p>&copy; 2020 Timothy Sutzer</p>

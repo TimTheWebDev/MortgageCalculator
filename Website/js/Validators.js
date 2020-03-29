@@ -20,7 +20,9 @@ function myDownPaymentValidationFunction() {
     var x, text, homeCost
     homeCost = document.getElementById("homeCost").value;
     x = document.getElementById("downPayment").value;
-    return !(isNaN(x) || x < 0 || x =="" || (x > homeCost && homeCost == 0));
+    //return !(isNaN(x) || x < 0 || x =="" || (x > homeCost && homeCost == 0));
+    test= (!isNaN(x) || !x >0 || !x =="" || !x < homeCost && homecost > 0)
+    return test;
 }
 
 

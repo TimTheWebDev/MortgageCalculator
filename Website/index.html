@@ -10,17 +10,19 @@
 
 <body>
     <h1>Loan and Amortization Schedule Calculator</h1>
+    <h1>By Tim Sutzer</h1>
+    <p id=aboutmelink><a href="https://www.w3schools.com/html/">About Me and a Discussion of the Code</a></p>
     <form>
         <label for="homeCost">Home Cost $</label>
         <input type="text" id="homeCost" name="homeCost" required="true">
         <span id='homeCostValid'></span><br><br>
 
         <label for="downPayment">Down Payment $</label>
-        <input type="text" id="downPayment" name="downPayment" required="true" step = ".01">
+        <input type="text" id="downPayment" name="downPayment" required="true">
         <span id='downPaymentValid'></span><br><br>
 
         <label for="apr">Apr %</label>
-        <input type="text" id="apr" name="apr" required="true"step = ".001">
+        <input type="text" id="apr" name="apr" required="true">
         <span id='aprValid'></span><br><br>
 
         <label for="years">Loan Duration in Years</label>
@@ -48,7 +50,7 @@
     </form>
         <br>
         <br>
-    <table>
+    <table id="metrics">
         <tr>
             <td>Monthly Payment</td>
             <td id="mortgagePayment"></td>
@@ -80,9 +82,8 @@
     </script>
 
     <footer>
-        <a href="https://www.w3schools.com/html/">About Me and a Discussion of the Code</a>
         <br>
-        <p>DISCLAIMER:  This code is student work, in fact it is a shameless ploy to get a job. I am in
+        <p>HUMOROUS DISCLAIMER:  This code is student work, in fact it is a shameless ploy to get a job. I am in
             the greater Detroit area, if you have an employment opportunity, please contact me.
             While I have diligently worked to make sure the calculations are accurate, it shouldn't be relied 
             on. As a matter of fact it shouldn't be used by anyone, ever. If I could afford a 
@@ -90,7 +91,7 @@
             to the GDPR run away!  I don't collect data about visitors, not because I am 
             opposed to the idea, I simply don't know how.</p> 
             
-                <p>&copy; 2020 Timothy Sutzer</p>
+                <p>&copy; 2020 Timothy Sutzer  <a href = "mailto: TimothySutzer@gmail.com">TimothySutzer@gmail.com</a></p>
     </footer>
 
 </body>

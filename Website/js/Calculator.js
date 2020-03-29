@@ -73,10 +73,10 @@ function calculate(e) {
         // number formatting to work was to print out to the HTML from the JS file.  As a 
         // result I needed to insert the header here as well, just above the loop.
         document.getElementById("output").innerHTML += `<tr>
-        <td>Payment</td>
-        <td>Remaining Principal</td>
-        <td>Monthly Interest</td>
-        <td>Monthly Principal</td>
+        <th>Payment</th>
+        <th>Remaining Principal</th>
+        <th>Monthly Interest</th>
+        <th>Monthly Principal</th>
         </tr>`
 
         // Getting payments from 1 to number of payments requires adding another month 
