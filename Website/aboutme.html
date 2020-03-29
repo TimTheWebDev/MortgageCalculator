@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Discussion</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <p><a href="https://www.amortizationschedule.info/">Home</a></p>
+    <p><a href="www.linkedin.com/in/timothy-sutzer">LinkedIn</a></p>
+    <p><a href="https://www.w3schools.com/html/">GitHub</a></p>
+    <p><a href="https://www.w3schools.com/html/">Resume</a></p>
+
+    <h2>About Me</h2>
+    <p id="par">My name is Timothy Sutzer. I am currently enrolled at Tech Elevator,
+        a Java based full stack developer bootcamp in Detroit. I am seeking
+        a junior developer job in the metro Detroit area. I have loved
+        computers my whole life. Short of a hard drive failure, I can fix
+        anything. Being a regional truck driver has taught me patience and
+        how to work within tight deadlines. When the opportunity arose to
+        change careers, I jumped at the chance to learn to program. The
+        biggest lesson I have taken from bootcamp is learning to educate
+        myself in this discipline. My personal areas of interest are financial
+        technology, digital security, Node.js, Java and continued learning
+        through paired programming. </p>
+
+
+    <h2>Discussion</h2>
+
+    <h3>Goal</h3>
+    <p id="par">The goal of this project was to write a deployable JS version of a Java
+        command line mortgage calculator that I wrote using only my current
+        skill set. Everything, except for an attributed regular expression,
+        is my own.</p>
+    <p id="par">The Code for the website and the original java project can be found
+        <a href="https://github.com/TimTheWebDev/MortgageCalculator">
+            HERE.</a></p>
+
+
+    <h3>Function</h3>
+    <p id="par">The calculator takes in home cost, down payment, annual percentage rate
+        and loan duration in years to generate the loan metrics and optionally,
+        it will display the amortization schedule.</p>
+
+    <h3>Structure</h3>
+    <p id="par">For simplicity’s sake, I broke out the event listeners for the validation
+        functions and the validation functions into their own JS files. The
+        code could have been tighter had I not, but for the purposes of someone
+        looking at my work it appears cleaner. All the code is commented and
+        gives some insight into the smaller decisions line by line.
+        Calculate.js does the heavy lifting. It takes in the validated form
+        data, instantiates the other variables, does the math and the optional
+        for loop generates the amortization schedule. I use a JS script to
+        inject the schedule table header inside the if statement, before the
+        for loop and then the corresponding data. Some simple CSS formats the
+        HTML pages. </p>
+
+    <h3>Analysis</h3>
+    <p id="par">We are currently learning JS and the resulting application reflects
+        the skills we have acquired to date. The goal of the project was to
+        deploy the code. I can build a local database but the logistics of
+        getting something working in the cloud will have to be a project for
+        another day. </p>
+
+    <p id="par">There was class discussion about validation in JS being easier than Java.
+        They seem equally challenging, but the JS appears a little more
+        intuitive on the page. This was the part of the project that was the
+        most absorbing. Working out the math kinks went pretty quickly but
+        under no circumstance did I want a bad input to blow up the page. The
+        exclusions in Validator.js (lines 10, 23 and 32) originally didn’t
+        include an empty string. The result of an empty field is a page of
+        NaN’s. Adding the x == ”” exclusion resulted in the calculate button
+        not working when there is an empty field. Because there was no event
+        for the listener to detect, it couldn’t signal the error to the user.
+        I spent a lot of time working on a validation function for the button
+        that said that the three fields couldn’t be empty strings with no
+        success. Sometimes the simplest solution is the best, I made the
+        input required in the HTML. I wish it was more elegant but it works. </p>
+
+    <p id="par">The lone issue that I haven’t solved, is limiting the decimal places
+        in the input. The field is taken in as text in the HTML or I could
+        limit it there using min, max and step in the input. The purpose of
+        this exercise is to demonstrate a working knowledge of JS so changing
+        it defeats the purpose. Extra decimal places don’t blow up the code
+        or have a tangible outcome numerically so I am content to leave it
+        alone. </p>
+
+    <h3>Security</h3>
+    <p id="par">Because there is no back end and I have strictly limited the input,
+        attacking the site would be difficult. The course devotes very
+        little discussion to security and the discussions we have had revolve
+        around poor database design. This isn’t a dare, if you look up and
+        see a black hat, please don’t blow me up because you can.</p>
+
+    <footer>
+        <p>&copy; 2020 Timothy Sutzer</p>
+    </footer>
+</body>
+
+</html>
