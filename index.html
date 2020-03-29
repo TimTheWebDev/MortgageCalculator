@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Mortgage and Amortization Schedule Calculator</h1>
+    <h1>Loan and Amortization Schedule Calculator</h1>
     <form>
         <label for="homeCost">Home Cost $</label>
         <input type="text" id="homeCost" name="homeCost">
@@ -27,8 +27,11 @@
         <select id="years" name="years">
             <option value="1">1</option>
             <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
             <option value="5">5</option>
-            <option value="5">7</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
             <option value="10">10</option>
             <option value="15">15</option>
             <option value="20">20</option>
@@ -37,9 +40,10 @@
         <br>
         <br>
         <input type="checkbox" id="amortSched" name="amortSched" value="amortSched">
-        <label for="amortSched">Calculate with Amortization Schedule? </label><br>
-
-
+        <label for="amortSched">Calculate with Amortization Schedule? </label>
+        <br>
+        <br>
+        <br>
         <input type="submit" value="Submit">
     </form>
 
@@ -66,15 +70,24 @@
 
     <table id="output">
     </table>
-   
-   <script src="/js/Listeners.js">
-    </script>
-   
-   <script src="/js/Calculator.js">
-    </script>
-   
-   <footer>
 
+    <script src="/js/Listeners.js">
+    </script>
+
+    <script src="/js/Calculator.js">
+    </script>
+
+    <footer>
+        <a href="https://www.w3schools.com/html/">About Me and a Discussion of the Code</a>
+        <br>
+        <p>DISCLAIMER:  This code is student work, in fact it is a shameless ploy to get a job. I am in
+            the greater Detroit area, if you have an employment opportunity, please contact me.
+            While I have diligently worked to make sure the calculations are accurate, it shouldn't be relied 
+            on. As a matter of fact it shouldn't be used by anyone, ever. If I could afford a 
+            lawyer, I am positive he would tell me that this is an awful idea. If you are subject
+             to the GDPR run away!  I don't collect data about visitors, not because I am 
+             opposed to the idea, I simply don't know how. That isn't to say that someone 
+             smarter than I am may be doing so on the back end.</p>
     </footer>
 
 </body>

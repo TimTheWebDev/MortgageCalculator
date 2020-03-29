@@ -7,7 +7,7 @@
 function myHomeCostValidationFunction() {
     var x, text;
     x = document.getElementById("homeCost").value;
-    return !(isNaN(x) || x < 1 || x > 10000000);
+    return !(isNaN(x) || x < 1000 || x > 10000000);
 }
 
 // I don't want users to enter down payment that exceeds the 
@@ -19,7 +19,7 @@ function myDownPaymentValidationFunction() {
     var x, text, homeCost
     homeCost = document.getElementById("homeCost").value;
     x = document.getElementById("downPayment").value;
-    return !(isNaN(x) || x < 1 || (x > homeCost && homeCost == 0));
+    return !(isNaN(x) || x < 0 || x =="" || (x > homeCost && homeCost == 0));
 }
 
 
