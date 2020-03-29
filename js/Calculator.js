@@ -21,12 +21,13 @@ function calculate(e) {
         console.log("invalid");
         return
     }
-    // years is taken in from the drop down menu
+    // years is taken in from the drop down menu.
     let years = Number.parseInt(document.getElementById("years").value);
-    // monthlyInterest is instantiated as a decimal
+    // monthlyInterest is instantiated as a decimal.
     let monthlyInterest = apr / 100 / 12;
-    // Calculates total loan payments
+    // Calculates total loan payments.
     let monthlyPayments = years * 12;
+    // Sets the value of the loan.
     let principal = homeCost - downPayment;
     // remainingPrincipal has to be set to principal at the start of the loop and 
     // it is decremented by the principal paid.
@@ -54,7 +55,7 @@ function calculate(e) {
     totalInterest = totalPayments - principal;
     document.getElementById("totalInterest").innerHTML = currencyFormat(totalInterest);
 
-    // Instantiates the output object outside the loop
+    // Instantiates the output object outside the loop.
     document.getElementById("output").innerHTML = "";
 
 
