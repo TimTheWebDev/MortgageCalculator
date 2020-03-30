@@ -8,10 +8,10 @@
 </head>
 <a href="/images/SutzerResume.pdf" download></a>
 <body>
-    <p><a id="links" href="https://www.amortizationschedule.info/">Home</a></p>
+    <p><a id="links" href="http://127.0.0.1:5500/index.html">Home</a></p>
     <p><a id="links" href="https://www.linkedin.com/in/timothy-sutzer">LinkedIn</a></p>
     <p><a id="links" href="https://github.com/TimTheWebDev">GitHub</a></p>
-    <p><a id="links" href="C:\Users\Student\Desktop\Website\Website\js\images\SutzerResume.pdf" download>Resume</a></p>
+    <p><a id="links" href="images\SutzerResume.pdf" download>Resume</a></p>
     <p><a id="links" href="mailto: TimothySutzer@gmail.com">Email</a></p>
 
     <h2>About Me</h2>
@@ -69,7 +69,7 @@
         intuitive on the page. This was the part of the project that was the
         most absorbing. Working out the math kinks went pretty quickly but
         under no circumstance did I want a bad input to blow up the page. The
-        exclusions in Validator.js (lines 10, 23 and 32) originally didn’t
+        exclusions in Validator.js (lines 10, 26-28 and 38) originally didn’t
         include an empty string. The result of an empty field is a page of
         NaN’s. Adding the x == ”” exclusion resulted in the calculate button
         not working when there is an empty field. Because there was no event
@@ -79,19 +79,31 @@
         success. Sometimes the simplest solution is the best, I made the
         input required in the HTML. I wish it was more elegant but it works. </p>
 
-    <p id="par">The lone issue that I haven’t solved, is limiting the decimal places
-        in the input. The field is taken in as text in the HTML or I could
-        limit it there using min, max and step in the input. The purpose of
+    <p id="par">There are two issues that I haven’t solved. The first is limiting 
+        the decimal places in the input. The field is taken in as text in the HTML
+         where I could limit it using min, max and step in the input. The purpose of
         this exercise is to demonstrate a working knowledge of JS so changing
         the HTML defeats the purpose. Extra decimal places don’t blow up the code
         or have a tangible outcome numerically so I am content to leave it
         alone. </p>
 
+    <p id="par">The second, is putting in an entry that violates the input fields 
+        parameters correctly produces an invalid.  However, fixing it doesn't 
+        change the error status.  The result is the calculate button ceases to 
+        function and the form needs to be reloaded.  While I am not excited 
+        about this, it is an unintended consequence of the way it is designed.  
+        The lesson learned going forward is when dealing with simple numerical 
+        inputs on a HTML form, take them in as numbers and let the HTML validate 
+        them.  This project was designed to show a working knowledge of JS so I 
+        am willing to live with it.  If anyone has a solution please feel free 
+        to email me.</p>
+
     <h3>Security</h3>
     <p id="par">Because there is no back end and I have strictly limited the input,
-        attacking the site would be difficult. The course devotes very
-        little discussion to security and the discussions we have had revolve
-        around poor database design.</p>
+        attacking the site would be difficult. Based on what we have learned so far,
+        not having a back end inoculates me from most attacks.  Not having user data 
+        or anything proprietary in the source code makes it very unlikely a hacker 
+        would take the time to try.</p>
 
     <footer>
         <p>&copy; 2020 Timothy Sutzer  <a href = "mailto: TimothySutzer@gmail.com">TimothySutzer@gmail.com</a></p>
