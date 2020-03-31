@@ -12,21 +12,21 @@ function myHomeCostValidationFunction() {
 
 
 // I don't want users to enter down payment that exceeds the 
-// principal amount, is a non number or is less than $1.  My
-// solution was to model this like the other two but 
-// when I asked the instructor for advice she recommended 
-// simplifying the terms to the three if statements for clarity.
+// principal amount, is a non number or is less than $1.  This
+// one had to be turned into a number for comparison purposes.
 function myDownPaymentValidationFunction() {
     if (!myHomeCostValidationFunction()) {
         return false;
     }
     var x, text, homeCost
     homeCost = document.getElementById("homeCost").value;
+    homeCost = Number(homeCost);
     x = document.getElementById("downPayment").value;
+    x = Number (x);
+    if (x < 0) return false;
     if (isNaN(x))  return false;
-    if (x =="") return false;
     if (x > homeCost) return false;
-    return test;
+    return true;
 }
 
 
