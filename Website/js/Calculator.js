@@ -63,7 +63,7 @@ function calculate(e) {
 
     // ***** LOOP *****
 
-    // If the check box is selected, the loop runs.  Each iteration produces for numbers:
+    // If the check box is selected, the loop runs.  Each iteration produces four numbers:
     // payment number, remaining principal, the portion of the payment that is interest
     // and the portion of the payment that is principal.  The principal should increase
     // top to bottom and the interest should decrease top to bottom.
