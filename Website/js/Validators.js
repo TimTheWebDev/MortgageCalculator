@@ -7,7 +7,7 @@
 function myHomeCostValidationFunction() {
     var x, text;
     x = document.getElementById("homeCost").value;
-    return !(isNaN(x) || x < 1000 || x =="" || x > 10000000);
+    return !(isNaN(x) || x < 0 || x =="" || x > 10000000);
 }
 
 
@@ -35,7 +35,7 @@ function myDownPaymentValidationFunction() {
 function myAprValidationFunction() {
     var x, text;
     x = document.getElementById("apr").value;
-    return !(isNaN(x) || x < .1 || x =="" ||  x > 50);
+    return !(isNaN(x) || x < .01 || x =="" ||  x > 50);
 }
 
 
